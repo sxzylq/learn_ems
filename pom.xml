@@ -13,7 +13,7 @@
         <module>ems_users</module>
         <module>ems_emps</module>
         <module>ems_files</module>
-        <module>ems_getway</module>
+        <module>ems_gateway</module>
     </modules>
 
     <!--全局定义springboot父项目版本号-->
