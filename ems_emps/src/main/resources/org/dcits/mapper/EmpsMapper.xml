@@ -14,5 +14,35 @@
         from tb_emps
     </select>
 
+    
+    <delete id="delete" parameterType="int" >
+        delete from tb_emps where id = #{id}
+    </delete>
+
+    <select id="findOne" parameterType="int" resultType="Emp">
+        select *
+        from tb_emps where id = #{id}
+    </select>
+
+    <update id="update" parameterType="Emp">
+        update tb_emps s
+        <set>
+            <if test="name != null and name != ''">
+                s.name = #{name},
+            </if>
+            <if test=" path !=null and path !='' ">
+                s.path = #{path},
+            </if>
+            <if test=" salary !=null and salary !='' ">
+                s.salary = #{salary},
+            </if>
+            <if test=" age !=null and age !='' ">
+                s.age = #{age},
+            </if>
+        </set>
+            <where>
+                s.id = #{id}
+            </where>
+    </update>
 
 </mapper>

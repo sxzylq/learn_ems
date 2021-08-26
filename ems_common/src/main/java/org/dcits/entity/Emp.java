@@ -1,7 +1,6 @@
 package org.dcits.entity;
 
 import lombok.Data;
-import lombok.experimental.Accessors;
 
 @Data
 public class Emp {
